@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1419177834 source:e:\programming\codeblocks\population increase uri.com\main.cpp
+	<iostream>
+	<algorithm>
+	<cstdlib>
+	<cmath>
+

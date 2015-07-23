@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1396124453 source:e:\programming\codeblocks\games uri.com\main.cpp
+	<iostream>
+	<string>
+	<vector>
+	<algorithm>
+	<cstdlib>
+	<cmath>
+

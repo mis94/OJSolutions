@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1396121608 source:e:\programming\codeblocks\detective watson uri.com\main.cpp
+	<iostream>
+	<algorithm>
+	<cmath>
+	<cstdlib>
+
