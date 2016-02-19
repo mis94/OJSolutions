@@ -2,8 +2,10 @@
 
 using namespace std;
 bool vis[20][20] ;
-char mine[20][20] ;
+string mine[20] ;
 set< vector< pair<int,int> > > container ;
+int m1[] = {0 , 0 , -1 , 1};
+int m2[] = {-1 , 1 , 0 , 0};
 void countReachOct(int n, int r, int c, int cc, vector< pair<int,int> > vect)
 {
     if(r<1||c<1)
@@ -21,10 +23,16 @@ void countReachOct(int n, int r, int c, int cc, vector< pair<int,int> > vect)
         vis[r][c] = 0 ;
         return ;
     }
-    countReachOct(n,r,c-1,cc+1,vect) ;
+    /*countReachOct(n,r,c-1,cc+1,vect) ;
     countReachOct(n,r,c+1,cc+1,vect) ;
     countReachOct(n,r-1,c,cc+1,vect) ;
-    countReachOct(n,r+1,c,cc+1,vect) ;
+    countReachOct(n,r+1,c,cc+1,vect) ;*/
+    for(int i = 0 ; i < 4 ; i++)
+    {
+        int tempr = r + m1[i];
+        int tempc = c + m2[i];
+        countReachOct(n,tempr,tempc,cc+1,vect);
+    }
     vis[r][c] = 0 ;
 }
 
@@ -57,8 +65,7 @@ int main()
         }
         for(int i=1;i<=n;i++)
         {
-            for(int j=1;j<=n;j++)
-                cin >> mine[i][j] ;
+                cin >> mine[i];
         }
         //countOct(n) ;
         for(int i=1;i<=n;i++)
