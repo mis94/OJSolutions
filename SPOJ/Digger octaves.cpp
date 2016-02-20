@@ -2,7 +2,7 @@
 
 using namespace std;
 bool vis[20][20] ;
-string mine[20] ;
+char mine[20][20] ;
 set< vector< pair<int,int> > > container ;
 int m1[] = {0 , 0 , -1 , 1};
 int m2[] = {-1 , 1 , 0 , 0};
@@ -65,7 +65,8 @@ int main()
         }
         for(int i=1;i<=n;i++)
         {
-                cin >> mine[i];
+            for(int j=1;j<=n;j++)
+                cin >> mine[i][j] ;
         }
         //countOct(n) ;
         for(int i=1;i<=n;i++)
